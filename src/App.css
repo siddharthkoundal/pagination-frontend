@@ -43,3 +43,34 @@
   text-align: center;
   word-break: break-word;
 }
+
+.page-number {
+  padding: 10px;
+  margin: 2px;
+  border: 1px solid #ccc;
+}
+
+.pagination-container {
+  padding: 20px;
+}
+
+.page-number {
+  padding: 10px 16px;
+  margin: 2px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+  transition: background 0.2s, color 0.2s;
+}
+
+.page-number:hover {
+  background: #f0f0f0;
+  color: #222;
+}
+
+.page-number.active {
+  background: #f0f0f0;
+  color: #222;
+  border-color: #f0f0f0;
+}
