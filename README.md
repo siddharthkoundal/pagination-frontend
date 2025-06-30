@@ -1,12 +1,67 @@
-# React + Vite
+# Pagination Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+This project is a React application that displays a list of products fetched from an API. It includes pagination controls to navigate through the product list.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- Fetches product data from an external API.
+- Displays products in a grid format.
+- Implements pagination to navigate through products.
+- Responsive design with styled components.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## File Structure
+
+```
+pagination
+├── public
+│   └── vite.svg
+├── src
+│   ├── components
+│   │   └── ProductCard.jsx
+│   ├── constants
+│   │   └── index.js
+│   ├── App.jsx
+│   ├── App.css
+│   └── main.jsx
+├── package.json
+└── README.md
+```
+
+## Installation
+
+1. Clone the repository:
+   ```
+   git clone <repository-url>
+   ```
+2. Navigate to the project directory:
+   ```
+   cd pagination
+   ```
+3. Install the dependencies:
+   ```
+   npm install
+   ```
+
+## Usage
+
+1. Start the development server:
+   ```
+   npm start
+   ```
+2. Open your browser and go to `http://localhost:3000` to view the application.
+
+## Components
+
+- **App.jsx**: Main component that manages state and renders product cards and pagination.
+- **ProductCard.jsx**: Component that displays individual product details.
+- **index.js**: Entry point of the application.
+
+## Constants
+
+- **constants/index.js**: Contains constant values such as `PAGE_SIZE` for pagination.
+
+## License
+
+This project is licensed under the MIT License.
