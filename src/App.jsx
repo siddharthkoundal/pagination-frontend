@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import './App.css'
+import './App.css';
 import ProductCard from './components/ProductCard';
 
 function App() {
@@ -25,10 +25,25 @@ function App() {
     setCurrentPage(n);
   }
 
+  const handlePrevPage = () => {
+    setCurrentPage((prev) => (prev - 1) % totalPages);
+  }
+
+  const handleNextPage = () => {
+    setCurrentPage((prev) => (prev + 1) % totalPages);
+  }
+
   return !products.length ? <h1>No Products Found</h1> : (
     <div>
       <h1>Products</h1>
       <div className='pagination-container'>
+        <button
+          style={{ padding: '5px', margin: '5px', cursor: 'pointer' }}
+          onClick={handlePrevPage}
+          disabled={currentPage === 0}
+        >
+          ⬅️
+        </button>
         {[...Array(totalPages).keys()].map((n) => (
           <span
             key={n}
@@ -38,6 +53,13 @@ function App() {
             {n + 1}
           </span>
         ))}
+        <button
+          style={{ padding: '5px', margin: '5px', cursor: 'pointer' }}
+          onClick={handleNextPage}
+          disabled={currentPage === totalPages - 1}
+        >
+          ➡️
+        </button>
       </div>
       <div className="products-grid">
         {products.slice(start, end).map((product) => (
